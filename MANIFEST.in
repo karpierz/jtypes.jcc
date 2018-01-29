@@ -1,0 +1,37 @@
+include README.rst
+include CHANGES.rst
+include LICENSE
+include tox.ini
+
+graft src
+exclude src/jt/jcc/_java/class2py.py
+
+exclude *.org
+exclude patch.*
+prune helpers
+prune src/jt/_jcc
+exclude src/jt/jcc/_platform/*.py
+include src/jt/jcc/_platform/__init__.py
+prune   src/jt/jcc/_java/org/apache/jcc
+exclude src/jt/jcc/*.py
+include src/jt/jcc/__about__.py
+include src/jt/jcc/__main__.py
+exclude src/jt/jcc/*.cpp
+exclude src/jt/jcc/*.h
+exclude src/jt/jcc/*.new
+exclude src/jt/jcc/*.org
+
+#exclude jcc/config.py
+#include jcc/patches/patch.*
+#recursive-include jcc *.h
+#recursive-include _jcc *.h
+#recursive-include java *.java
+#recursive-include helpers *.py
+
+graft docs
+prune docs/_build
+
+graft tests
+
+global-exclude .build .build.*
+global-exclude *.py[co] __pycache__
