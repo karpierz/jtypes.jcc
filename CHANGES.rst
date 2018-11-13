@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.22.0a7 (2018-09-03)
+2.22.0a8 (2018-09-03)
 ---------------------
 - Synchro with JCC master branch (svn rev: 1839491).
 
