@@ -1,15 +1,12 @@
 jtypes.jcc documentation
 ========================
 
-.. include:: README.rst
-
-Parts of the documentation
-==========================
-
 .. toctree::
    :maxdepth: 2
+   :caption: Contents:
 
-   CHANGES.rst
+   README
+   CHANGES
 
 Indices and tables
 ==================

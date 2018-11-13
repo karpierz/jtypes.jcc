@@ -8,27 +8,29 @@ PyLucene's Python to Java bridge.
 Overview
 ========
 
-  jtypes.jcc provides a bridge necessary to call into Java classes from Python via
+  **jtypes.jcc** provides a bridge necessary to call into Java classes from Python via
   Java's Native Invocation Interface (JNI).
 
-  | jtypes.jcc is a lightweight Python package, based on the *ctypes* or *cffi* library.
+  `PyPI record`_.
+
+  | **jtypes.jcc** is a lightweight Python package, based on the *ctypes* or *cffi* library.
   | It is an almost fully compliant implementation of PyLucene's *JCC* package
     by reimplementing its functionality in a clean Python instead of C++.
 
 About JCC:
 ----------
 
-Borrowed from the `original website <http://lucene.apache.org/pylucene/jcc/>`__:
+Borrowed from the `original website`_:
 
-  *What is JCC ?*
+  What is **JCC** ?
 
-  JCC is a C++ code generator that produces a C++ object interface wrapping a Java
-  library via Java's Native Interface (JNI). JCC also generates C++ wrappers that
+  **JCC** is a C++ code generator that produces a C++ object interface wrapping a Java
+  library via Java's Native Interface (JNI). **JCC** also generates C++ wrappers that
   conform to Python's C type system making the instances of Java classes directly
   available to a Python interpreter.
   ...
 
-  JCC is a Python extension written in Python and C++.
+  **JCC** is a Python extension written in Python and C++.
   It requires a Java Runtime Environment (JRE) to operate as it uses Java's reflection
   APIs to do its work.
 
@@ -43,10 +45,10 @@ Installation
 
 Prerequisites:
 
-+ Python 2.7 or higher or 3.3 or higher
++ Python 2.7 or higher or 3.4 or higher
 
   * http://www.python.org/
-  * 2.7 and 3.4 are primary test environments.
+  * 2.7 and 3.6 are primary test environments.
 
 + pip and setuptools
 
@@ -64,11 +66,11 @@ To ensure everything is running correctly you can run the tests using::
 Development
 ===========
 
-Visit `development page <https://github.com/karpierz/jtypes.jcc>`__
+Visit `development page`_
 
 Installation from sources:
 
-Clone the `sources <https://github.com/karpierz/jtypes.jcc>`__ and run::
+Clone the `sources`_ and run::
 
     python -m pip install ./jtypes.jcc
 
@@ -94,4 +96,9 @@ License
 Authors
 =======
 
-* Adam Karpierz <python@python.pl>
+* Adam Karpierz <adam@karpierz.net>
+
+.. _PyPI record: https://pypi.python.org/pypi/jtypes.jcc
+.. _original website: http://lucene.apache.org/pylucene/jcc
+.. _development page: https://github.com/karpierz/jtypes.jcc
+.. _sources: https://github.com/karpierz/jtypes.jcc

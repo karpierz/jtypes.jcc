@@ -6,7 +6,7 @@ from __future__ import absolute_import, print_function
 
 import unittest
 import sys
-import os
+import os.path
 import logging
 
 from . import test_dir
@@ -14,7 +14,7 @@ from . import test_dir
 test_java = os.path.join(test_dir, "java")
 
 
-def test_suite(names=None, omit=()):
+def test_suite(names=None, omit=("run",)):
 
     from .python import __name__ as pkg_name
     from .python import __path__ as pkg_path
@@ -28,7 +28,7 @@ def test_suite(names=None, omit=()):
     return tests
 
 
-def runTest():
+def main():
 
     print("Running testsuite", "\n", file=sys.stderr)
 
@@ -41,11 +41,7 @@ def runTest():
     sys.exit(0 if result.wasSuccessful() else 1)
 
 
-def main():
-
+if __name__.rpartition(".")[-1] == "__main__":
     # logging.basicConfig(level=logging.INFO)
     # logging.basicConfig(level=logging.DEBUG)
-    runTest()
-
-
-main()
+    main()

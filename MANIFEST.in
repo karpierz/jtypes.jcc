@@ -3,12 +3,11 @@ include CHANGES.rst
 include LICENSE
 include tox.ini
 
-graft src
-exclude src/jt/jcc/_java/class2py.py
-
 exclude *.org
 exclude patch.*
 prune helpers
+
+graft src
 prune src/jt/_jcc
 exclude src/jt/jcc/_platform/*.py
 include src/jt/jcc/_platform/__init__.py
@@ -30,8 +29,11 @@ exclude src/jt/jcc/*.org
 
 graft docs
 prune docs/_build
+recursive-exclude docs *.org *.old *.new
 
 graft tests
+exclude tests/_info_.txt
+recursive-exclude tests *.org *.old *.new
 
 global-exclude .build .build.*
 global-exclude *.py[co] __pycache__
